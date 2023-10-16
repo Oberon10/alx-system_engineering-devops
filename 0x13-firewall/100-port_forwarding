@@ -1,0 +1,7 @@
+sudo vi /etc/ufw/before.rules
+
+*nat
+: Prerouting accept [0:0]
+-A prerouting -p tcp --dport 8080 -j redirect --to-port 80
+commit
+#save and exit
